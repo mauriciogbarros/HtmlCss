@@ -1,1 +1,1 @@
-Beauty School example
+Adding a little beauty to html
