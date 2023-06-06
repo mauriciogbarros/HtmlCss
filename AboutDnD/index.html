@@ -1,0 +1,74 @@
+<!--
+    Short description of the game
+    Media: image, videos, youtube embedded iframes
+    Provide details and links to other parts of the site
+    HTML form for the user their email address and join the site's newslatter.
+    - Input element to enter email
+    - Hidden input element with your name
+    - Join button to submit the form (POST to https://httpbin.org/post)
+    - Only allow to submit when a valid email address has been entered.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/index.css" rel="stylesheet">
+    <title>Index</title>
+</head>
+<body>
+    <header>
+        <h1>Index</h1>
+        <h2>Dungeons & Dragons</h2>
+        <p>Final Assessment of WEB222 NEE - Winter term 2023</p>
+    </header>
+
+    <nav>
+        <ul>
+            <button id="indexButton"><a href="./index.html">Index</a></button>
+            <button id="infoButton"><a href="./info.html">Info</a></button>
+            <button id="reviewButton"><a href="./review.html">Reviews</a></button>
+            <button id="aboutButton"><a href="./about.html">About</a></button>
+        </ul>
+    </nav>
+
+    <main>
+        <p>
+            The various worlds of Dungeons & Dragons are filled with monsters and magic, that are constantly being discovered by fabulous adventurers in search of fame, power and glory. Each player controls one character, while the Dungeon Master provides the description of the world and the events as they unfold, while adjucating rules and keeping the game balanced and enjoyable.
+        </p>
+
+        <iframe width="750em" height="375em" src="https://www.youtube.com/embed/_OENI3Lgytk" title="Stranger Things Season 4 | The Ultimate D&amp;D Game Scene [HD] | Netflix" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>A D&D Scene</iframe>
+
+        <p>
+            The video above is a clip fromt he Netflix series "Stranger Things" that, among other media, helped make the 5th edition of this game extremely popular.
+        </p>
+
+        <iframe width="750em" height="375em" src="https://www.youtube.com/embed/U-M5NH9PGi4" title="Carpet Throwback" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+        <p>
+            The video above shows an essential D&D game, from a group a voice actors. This group, now known as "Critical Role", became the most famous group to play this game, and cultivated a huge fan base to really helped propel the game forward.
+        </p>
+
+        <form method="post" action="https://httpbin.org/post">
+            <fieldset>
+                <legend><h3>Newsletter registration</h3></legend>
+                <p>
+                    Please fill out the form below to register to our newsletter and receive more updated about the world's most famous roleplaying game.
+                </p>
+                <div>
+                    <label for="newsletterEmail">e-mail: <input id="newsletterEmail" type="email" required placeholder="Your e-mail address"></label>
+                    <input type="submit" value="Join">
+                </div>
+                <div>
+                    <input id="studentName" type="text" value="Mauricio Gomes de Barros" hidden>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+
+    <script src="./js/data.js"></script>
+    <script src="./js/app.js"></script>
+    
+</body>
+</html>

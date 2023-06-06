@@ -1,0 +1,77 @@
+<!--
+    Dynamic page
+    Other people's reviews of playing the game.
+    Reviews are displayed in cards
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/review.css" rel="stylesheet">
+    <title>Review</title>
+</head>
+<body>
+    <header>
+        <h1>Reviews</h1>
+        <p>Scream into the void, we are always listening...</p>
+    </header>
+
+    <nav>
+        <ul>
+            <button id="indexButton"><a href="./index.html">Index</a></button>
+            <button id="infoButton"><a href="./info.html">Info</a></button>
+            <button id="reviewButton"><a href="./review.html">Reviews</a></button>
+            <button id="aboutButton"><a href="./about.html">About</a></button>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Previous reviews of the game</h2>
+        <div id="reviewCards" class="reviewCards">
+            <div id="cards" class="cards">
+
+            </div>
+        </div>
+
+        <form method="post" action="#">
+            <fieldset>
+                <legend><h3>Provide your review</h3></legend>
+                <p>
+                    We are always glad to hear your insights and opinions about Dungeons & Dragons.
+                </p>
+                <div>
+                    <label for="name">Name: 
+                        <input id="name" type="text" required placeholder="Your name">
+                    </label>
+                    <label for="reviewDate">Date: 
+                        <input id="reviewDate" type="date" required>
+                    </label>
+                    <label for="rating">Rating: 
+                        <select id="rating" required>
+                            <option value ="0">-Select-</option>
+                            <option value="1">1/5</option>
+                            <option value="2">2/5</option>
+                            <option value="3">3/5</option>
+                            <option value="4">4/5</option>
+                            <option value="5">5/5</option>
+                        </select>
+                    </label>
+                </div>
+                <div>
+                    <label for="comment">
+                        Please provide your comments:
+                        <textarea id="comment" rows="3" cols="30" placeholder="I like D&D because..."></textarea>
+                    </label>
+                </div>
+            </fieldset>
+            <input id="submitReview" type="submit" value="Submit"">
+        </form>
+    </main>
+    
+    <script src="../js/data.js"></script>
+    <script src="../js/app.js"></script>
+
+</body>
+</html>
